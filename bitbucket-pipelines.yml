@@ -1,0 +1,16 @@
+image: ddgg/oop_2020:build_v1
+
+pipelines:
+  default:
+    - step:
+        script:
+          - pushd Projekt/
+          -   mkdir build-project && pushd build-project
+          -     qmake ../project
+          -     make -j4 
+          -     pushd tests
+          -       LD_LIBRARY_PATH=../utils ./tests
+          -     popd
+          -   popd
+          - popd
+          - .ci/collect_reports.sh
