@@ -1,6 +1,6 @@
 # OOP 2020 G1
 
-Learning platform, made as a part of "Object-oriented programming II".
+Plagiarism detector, made as a part of "Object-oriented programming II".
 
 Execute ```source oop.env``` to load the environment.
 
